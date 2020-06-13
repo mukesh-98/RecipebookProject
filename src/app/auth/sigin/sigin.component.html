@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSignin(signin)" #signin="ngForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required class="form-control" ngModel placeholder="Eg:abc@xyz.com">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required ngModel class="form-control">
+    </div>
+    <div class="form-group">
+      <small>{{error}}</small>
+    </div>
+    <div class="form-group">
+      <button type="submit"  class="btn btn-success mx-3" [disabled]="!signin.valid">Sign In</button>
+      <button type="button" class="btn btn-danger mx-3"(click)="onCancel()">Cancel </button>
+    </div>
+   
+   
+</form>

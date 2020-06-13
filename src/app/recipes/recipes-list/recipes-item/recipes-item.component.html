@@ -1,0 +1,16 @@
+<a class="mb-2 list-group-item clearfix " 
+    [routerLink]="[id]"
+    routerLinkActive="active"
+    style="border: 0.3px solid lightgrey;cursor: pointer;">
+    <div class="float-left">
+        <h4 class="list-group-item-heading">
+            {{ recipe.name}}
+        </h4>
+        <p class="list-group-item-text">
+            {{ recipe.desc }}
+        </p>
+    </div>
+    <span class="float-right p-3">
+        <img src="{{ recipe.imgpath }}"  alt="{{ recipe.name }}" class="img-responsive" style="max-height: 50px;">
+    </span>
+</a>
